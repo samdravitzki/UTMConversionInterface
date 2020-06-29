@@ -1,0 +1,16 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "UTMConversion",
+        "repositoryURL": "https://github.com/wtw-software/UTMConversion",
+        "state": {
+          "branch": null,
+          "revision": "f8ac9025c80c37e80d3e28c7487983ec54c0a338",
+          "version": "1.3.0"
+        }
+      }
+    ]
+  },
+  "version": 1
+}

@@ -8,11 +8,15 @@
 
 import SwiftUI
 import MapKit
+import UTMConversion
 
 struct ContentView: View {
     @State private var centerCoordinate = CLLocationCoordinate2D()
     
+    
     var body: some View {
+
+        
         VStack {
             ZStack {
                 MapView(centerCoordinate: $centerCoordinate)
@@ -26,7 +30,7 @@ struct ContentView: View {
                 Text("WGS48")
                 HStack {
                     Text("Coordinates")
-                    Text("\(centerCoordinate.longitude), \(centerCoordinate.latitude)")
+                    Text("\(centerCoordinate.latitude), \(centerCoordinate.longitude)")
                     .frame(width: 200)
                 }
                 .padding(.bottom)
@@ -35,12 +39,12 @@ struct ContentView: View {
                 
                 HStack {
                     Text("Zone")
-                    Text(UTMZoneFromWGS48(longitude: centerCoordinate.longitude, latitude: centerCoordinate.latitude))
+                    Text("\(centerCoordinate.zone)\(centerCoordinate.hemisphere == UTMHemisphere.northern ? "N" : "S")")
                     .frame(width: 200)
                 }
                 HStack {
                     Text("Coordinates")
-                    Text("\(centerCoordinate.longitude), \(centerCoordinate.latitude)")
+                    Text("\(centerCoordinate.utmCoordinate().easting), \(centerCoordinate.utmCoordinate().northing)")
                     .frame(width: 200)
                 }
             }

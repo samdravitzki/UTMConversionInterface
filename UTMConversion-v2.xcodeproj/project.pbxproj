@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -14,6 +14,7 @@
 		10F1C31E24A8468100F2AF70 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 10F1C31C24A8468100F2AF70 /* Main.storyboard */; };
 		10F1C32724A8480B00F2AF70 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10F1C32624A8480B00F2AF70 /* MapView.swift */; };
 		10F1C32924A8A21B00F2AF70 /* UTM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10F1C32824A8A21B00F2AF70 /* UTM.swift */; };
+		10FC8AC524AA10E400708242 /* UTMConversion in Frameworks */ = {isa = PBXBuildFile; productRef = 10FC8AC424AA10E400708242 /* UTMConversion */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				10FC8AC524AA10E400708242 /* UTMConversion in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -45,6 +47,7 @@
 			children = (
 				10F1C31224A8467C00F2AF70 /* UTMConversion-v2 */,
 				10F1C31124A8467C00F2AF70 /* Products */,
+				10F1C32A24AA0E7600F2AF70 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -80,6 +83,13 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		10F1C32A24AA0E7600F2AF70 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -96,6 +106,9 @@
 			dependencies = (
 			);
 			name = "UTMConversion-v2";
+			packageProductDependencies = (
+				10FC8AC424AA10E400708242 /* UTMConversion */,
+			);
 			productName = "UTMConversion-v2";
 			productReference = 10F1C31024A8467C00F2AF70 /* UTMConversion-v2.app */;
 			productType = "com.apple.product-type.application";
@@ -124,6 +137,9 @@
 				Base,
 			);
 			mainGroup = 10F1C30724A8467C00F2AF70;
+			packageReferences = (
+				10FC8AC324AA10E400708242 /* XCRemoteSwiftPackageReference "UTMConversion" */,
+			);
 			productRefGroup = 10F1C31124A8467C00F2AF70 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -296,6 +312,10 @@
 				DEVELOPMENT_TEAM = ZTCNWLXT2M;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+				);
 				INFOPLIST_FILE = "UTMConversion-v2/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -319,6 +339,10 @@
 				DEVELOPMENT_TEAM = ZTCNWLXT2M;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+				);
 				INFOPLIST_FILE = "UTMConversion-v2/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -353,6 +377,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		10FC8AC324AA10E400708242 /* XCRemoteSwiftPackageReference "UTMConversion" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/wtw-software/UTMConversion";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.3.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		10FC8AC424AA10E400708242 /* UTMConversion */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 10FC8AC324AA10E400708242 /* XCRemoteSwiftPackageReference "UTMConversion" */;
+			productName = UTMConversion;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 10F1C30824A8467C00F2AF70 /* Project object */;
 }
