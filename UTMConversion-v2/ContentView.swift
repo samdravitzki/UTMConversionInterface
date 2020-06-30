@@ -48,6 +48,7 @@ struct ContentView: View {
                     .frame(width: 200)
                 }
             }
+        .frame(height: 200)
             
         
         }
